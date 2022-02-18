@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SubstationCipher</string>
+    <string name="metin">Metin</string>
+    <string name="sifreli_metin">Şifreli Metin</string>
+</resources>

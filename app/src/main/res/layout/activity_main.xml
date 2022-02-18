@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.emincankarasoy.substationcipher.presentation.viewmodel.SubstationCipherViewModel" />
+    </data>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/encryptTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:hint="@string/metin"
+            android:textAlignment="center"
+            android:background="@drawable/textview_background"
+            android:autofillHints="Metin"
+            android:inputType="text"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.encryptedText,default=`Şifreli Metin`}"
+            android:padding="15dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:background="@drawable/textview_background"/>
+
+        <Button
+            android:id="@+id/encryptTextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sifrele"
+            android:layout_marginTop="10dp"
+            android:padding="15dp"
+            tools:ignore="HardcodedText"/>
+
+        <EditText
+            android:id="@+id/decryptTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/sifreli_metin"
+            android:padding="15dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:background="@drawable/textview_background"
+            android:autofillHints="@string/sifreli_metin"
+            android:inputType="text"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.decryptedText,default=`Metin`}"
+            android:padding="15dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:background="@drawable/textview_background"/>
+
+        <Button
+            android:id="@+id/decryptTextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sifreyi Coz"
+            android:padding="15dp"
+            android:layout_marginTop="10dp"
+            tools:ignore="HardcodedText" />
+
+
+    </LinearLayout>
+</layout>
